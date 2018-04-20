@@ -1,0 +1,10 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="title" name="title" matInput placeholder="Title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea [(ngModel)]="content" name="content" matInput placeholder="Content"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addPosts(title,content)">Add new</button>
+</form>
+

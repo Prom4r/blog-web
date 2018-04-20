@@ -1,0 +1,16 @@
+<form [hidden]="showData">
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="id" name="id" matInput placeholder="ID post to update">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="getPosts(id)">Find</button>
+</form>
+<form class="example-form" [hidden]="!showData">
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="title" name="title" matInput placeholder="{{title}}">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea [(ngModel)]="content" name="content" matInput placeholder="{{content}}"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="updatePosts(title,content)">Update posts</button>
+</form>
+
